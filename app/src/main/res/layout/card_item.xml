@@ -1,0 +1,76 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/basic_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/cardview_light_background"
+        android:padding="20dp"
+        android:id="@+id/basic_card_container"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:id="@+id/card_icon"/>
+        <TextView
+            android:id="@+id/card_label"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/cardview_light_background"
+        android:padding="20dp"
+        android:id="@+id/network_card_container"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/network_card_message"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:text="Hey, we found some videos waiting to be uploaded. Do you want to upload them now?"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/network_card_later"
+                android:text="LATER"
+                android:textColor="@color/colorAccent"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textAlignment="viewEnd"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/network_card_sure"
+                android:text="SURE"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:padding="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
